@@ -622,6 +622,8 @@ pub enum ChannelType {
     ///
     /// [`ChannelCategory`]: struct.ChannelCategory.html
     Category = 4,
+    News = 5,
+    Store = 6,
 }
 
 enum_number!(
@@ -631,6 +633,8 @@ enum_number!(
         Voice,
         Group,
         Category,
+        News,
+        Store,
     }
 );
 
@@ -642,6 +646,8 @@ impl ChannelType {
             ChannelType::Text => "text",
             ChannelType::Voice => "voice",
             ChannelType::Category => "category",
+            ChannelType::News => "news",
+            ChannelType::Store => "store",
         }
     }
 
@@ -652,6 +658,8 @@ impl ChannelType {
             ChannelType::Voice => 2,
             ChannelType::Group => 3,
             ChannelType::Category => 4,
+            ChannelType::News => 4,
+            ChannelType::Store => 4,
         }
     }
 }
