@@ -10,10 +10,13 @@ readme = "README.md"
 repository = "https://github.com/serenity-rs/serenity.git"
 version = "0.5.14"
 
+[patch.crates-io]
+openssl = { git = "https://github.com/Lymia/rust-openssl", version = "0.9.24", branch = "0.9.x" }
+
 [dependencies]
 bitflags = "^1.0"
 log = "~0.4"
-parking_lot = "^0.5"
+parking_lot = "^0.9"
 serde = "^1.0"
 serde_derive = "^1.0"
 serde_json = "^1.0"
