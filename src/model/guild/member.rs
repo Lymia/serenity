@@ -259,11 +259,15 @@ impl Member {
     pub fn highest_role_info(&self) -> Option<(RoleId, i64)> {
         let guild = self.guild_id.to_guild_cached()?;
         let reader = guild.try_read()?;
+        self.highest_role_info_(&reader)
+    }
 
+    #[cfg(feature = "cache")]
+    pub(crate) fn highest_role_info_(&self, guild: &Guild) -> Option<(RoleId, i64)> {
         let mut highest = None;
 
         for role_id in &self.roles {
-            if let Some(role) = reader.roles.get(&role_id) {
+            if let Some(role) = guild.roles.get(&role_id) {
                 // Skip this role if this role in iteration has:
                 //
                 // - a position less than the recorded highest

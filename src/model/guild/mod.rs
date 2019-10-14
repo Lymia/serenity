@@ -697,10 +697,10 @@ impl Guild {
         }
 
         let lhs = self.members.get(&lhs_id)?
-            .highest_role_info()
+            .highest_role_info_(self)
             .unwrap_or((RoleId(0), 0));
         let rhs = self.members.get(&rhs_id)?
-            .highest_role_info()
+            .highest_role_info_(self)
             .unwrap_or((RoleId(0), 0));
 
         // If LHS and RHS both have no top position or have the same role ID,
