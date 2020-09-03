@@ -78,6 +78,7 @@ impl WebSocketGatewayClientExt for WsClient {
                 "shard": shard_info,
                 "token": token,
                 "v": constants::GATEWAY_VERSION,
+                "intents": 32767,
                 "properties": {
                     "$browser": "serenity",
                     "$device": "serenity",
