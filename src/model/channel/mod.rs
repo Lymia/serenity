@@ -624,6 +624,8 @@ pub enum ChannelType {
     Category = 4,
     News = 5,
     Store = 6,
+
+    Undocumented13 = 13,
 }
 
 enum_number!(
@@ -635,6 +637,8 @@ enum_number!(
         Category,
         News,
         Store,
+
+        Undocumented13,
     }
 );
 
