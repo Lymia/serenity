@@ -652,6 +652,7 @@ impl ChannelType {
             ChannelType::Category => "category",
             ChannelType::News => "news",
             ChannelType::Store => "store",
+            _ => "unknown",
         }
     }
 
@@ -662,8 +663,9 @@ impl ChannelType {
             ChannelType::Voice => 2,
             ChannelType::Group => 3,
             ChannelType::Category => 4,
-            ChannelType::News => 4,
-            ChannelType::Store => 4,
+            ChannelType::News => 5,
+            ChannelType::Store => 6,
+            _ => 100,
         }
     }
 }
