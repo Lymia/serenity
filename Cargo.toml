@@ -10,9 +10,6 @@ readme = "README.md"
 repository = "https://github.com/serenity-rs/serenity.git"
 version = "0.5.14"
 
-[patch.crates-io]
-openssl = { git = "https://github.com/Lymia/rust-openssl", version = "0.9.24", branch = "0.9.x" }
-
 [dependencies]
 bitflags = "^1.0"
 log = "~0.4"
@@ -23,7 +20,7 @@ serde_json = "^1.0"
 
 [dependencies.base64]
 optional = true
-version = "0.10"
+version = "0.13"
 
 [dependencies.byteorder]
 optional = true
@@ -43,7 +40,7 @@ version = "~0.10"
 
 [dependencies.hyper-native-tls]
 optional = true
-version = "0.2.4"
+version = "0.3"
 
 [dependencies.lazy_static]
 optional = true
@@ -57,7 +54,7 @@ version = "0.13"
 
 [dependencies.native-tls]
 optional = true
-version = "0.1"
+version = "0.2"
 
 [dependencies.opus]
 optional = true
@@ -77,11 +74,11 @@ version = "~1.7"
 optional = true
 version = "~0.3"
 
-[dependencies.evzht9h3nznqzwl]
+[dependencies.websocket]
 default-features = false
 features = ["sync-ssl"]
 optional = true
-version = "0.0.3"
+version = "0.26.2"
 
 [dev-dependencies.matches]
 version = "0.1.6"
@@ -115,7 +112,6 @@ model = ["builder", "http"]
 standard_framework = ["framework"]
 utils = ["base64"]
 voice = ["byteorder", "gateway", "opus", "sodiumoxide"]
-websocket = ["evzht9h3nznqzwl"]
 
 [package.metadata.docs.rs]
 all-features = true
